@@ -1,40 +1,18 @@
 services:
   ktor-v3_4_3:
     build:
-      context: "./ktor-sample/"
+      context: "./ktor-sample-3.4.3/"
       dockerfile: Dockerfile
     ports:
       - "${PORT_V3_4_3:-8043}:8080"
     volumes:
-      - "./ktor-sample/:/app"
-      - "./settings.gradle.kts.3_4_3:/app/settings.gradle.kts"
-      - "gradle-user-v3_4_3:/root/.gradle"
-      - "gradle-pj-v3_4_3:/app/.gradle"
-      - "build-v3_4_3:/app/build"
-      - "kotlin-v3_4_3:/app/.kotlin"
+      - "./ktor-sample-3.4.3/:/app"
 
   ktor-v3_5_0:
     build:
-      context: "./ktor-sample/"
+      context: "./ktor-sample-3.5.0/"
       dockerfile: Dockerfile
     ports:
       - "${PORT_V3_5_0:-8050}:8080"
     volumes:
-      - "./ktor-sample/:/app"
-      - "./settings.gradle.kts.3_5_0:/app/settings.gradle.kts"
-      - "gradle-user-v3_5_0:/root/.gradle"
-      - "gradle-pj-v3_5_0:/app/.gradle"
-      - "build-v3_5_0:/app/build"
-      - "kotlin-v3_5_0:/app/.kotlin"
-
-volumes:
-  # 3.4.3
-  gradle-user-v3_4_3:
-  gradle-pj-v3_4_3:
-  build-v3_4_3:
-  kotlin-v3_4_3:
-  # 3.5.0
-  gradle-user-v3_5_0:
-  gradle-pj-v3_5_0:
-  build-v3_5_0:
-  kotlin-v3_5_0:
+      - "./ktor-sample-3.5.0/:/app"
