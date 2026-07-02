@@ -20,4 +20,9 @@ start.ktor.ioでプロジェクを作成
 ## 起動方法
 
 1. `cp .env.example .env`
-2. `docker compose up`
+2. `docker compose up --build -d`
+
+起動はそれぞれ個別に行うことも可能
+
+- `docker compose run --rm --service-ports ktor-v3_4_3`
+- `docker compose run --rm --service-ports ktor-v3_5_0`
