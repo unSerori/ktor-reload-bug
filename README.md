@@ -1,6 +1,6 @@
 # ktor reload bug
 
-Sample repository for reproducing the [Ktor Issue](#????).
+Sample repository for reproducing the [Ktor Issue](https://youtrack.jetbrains.com/issues/KTOR?preview=KTOR-9684).
 
 ## Specification
 
