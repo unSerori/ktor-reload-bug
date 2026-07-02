@@ -1,0 +1,9 @@
+services:
+  ktor-v3_5_1:
+    build:
+      context: "./ktor-sample/"
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT:-8080}:8080"
+    volumes:
+      - "./ktor-sample/:/app"
