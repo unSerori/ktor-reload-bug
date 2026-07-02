@@ -4,4 +4,4 @@ WORKDIR /app
 
 EXPOSE 8080
 
-CMD ["bash", "-c", "./gradlew -t build -x test -d & ./gradlew run"]
+CMD ["bash", "-c", "./gradlew -t build -x test -i & ./gradlew run"]
