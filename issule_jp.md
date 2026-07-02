@@ -1,8 +1,8 @@
-# Auto-reloadが初回のみ成功し、2回目以降検知されない（3.5.0以降に発生したregression）
+# Auto-reloadが初回のみ成功し、2回目以降検知されないことがある（3.5.0以降に発生したregression）
 
 ## Summary
 
-3.5.0以降で、ホットリロード（`./gradlew -t build`）が、サーバ起動後の最初のソースコード変更&保存では正常に動作しますが、2回目以降の変更では正常に動作しない。
+3.5.0以降で、ホットリロード（`./gradlew -t build`）が、サーバ起動後の最初のソースコード変更&保存では正常に動作しますが、2回目以降の変更では正常に動作しないことがある。
 
 ## Expected Behavior
 
@@ -27,7 +27,7 @@ TODO: ここにはる
 - BUILD SUCCESSFUL自体は表示されている
 - 問題のある二度目の変更&保存時、「Waiting for changes to input files...」以降に流れるべき「」が流れない。Ktorはアクセス時に更新するという認識。
 
-なお、サーバを再起動すると、再びちょうど一度だけ成功しその後は同じ問題が発生する。
+なお、サーバを再起動すると、同じ問題が発生する。
 
 ## Steps to Reproduce
 
@@ -80,6 +80,7 @@ OS: MacOS
 VSCode: 1.125.0
 Docker Client: 27.4.0
 Docker Server（Engine）: 27.4.0
+Java: 21
 Kotlin: 2.4.0
 Ktor: 3.5.0
 
